@@ -1,6 +1,6 @@
 package com.example.spring_modulith_demo.order;
 
-import com.example.spring_modulith_demo.notification.service.NotificationService;
+import com.example.spring_modulith_demo.notification.NotificationFacade;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 public class OrderService {
 
   private final OrderRepository repository;
-  private final NotificationService notificationService;
+  private final NotificationFacade notificationFacade;
 
   public UUID createOrder() {
     int randomQuantity = new Random().ints(1, 10).findFirst().getAsInt();
     Order order = repository.save(new Order(UUID.randomUUID(), randomQuantity));
-    notificationService.notify("Order " + order.id() + " created.");
+    notificationFacade.notify("Order " + order.id() + " created.");
     return order.id();
   }
 

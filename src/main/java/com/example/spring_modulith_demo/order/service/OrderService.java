@@ -1,6 +1,8 @@
-package com.example.spring_modulith_demo.order;
+package com.example.spring_modulith_demo.order.service;
 
 import com.example.spring_modulith_demo.notification.NotificationFacade;
+import com.example.spring_modulith_demo.order.model.Order;
+import com.example.spring_modulith_demo.order.persistence.OrderRepository;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;

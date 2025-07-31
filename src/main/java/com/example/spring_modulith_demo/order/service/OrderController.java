@@ -1,5 +1,6 @@
-package com.example.spring_modulith_demo.order;
+package com.example.spring_modulith_demo.order.service;
 
+import com.example.spring_modulith_demo.order.model.Order;
 import java.util.List;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;

@@ -1,5 +1,6 @@
-package com.example.spring_modulith_demo.order;
+package com.example.spring_modulith_demo.order.persistence;
 
+import com.example.spring_modulith_demo.order.model.Order;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

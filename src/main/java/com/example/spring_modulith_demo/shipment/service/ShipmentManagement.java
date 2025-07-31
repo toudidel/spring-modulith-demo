@@ -14,7 +14,8 @@ public class ShipmentManagement {
   private final ShipmentService shipmentService;
 
   @EventListener
-  public void onOrderCreated(OrderCreatedEvent event) {
+  public void onOrderCreated(OrderCreatedEvent event) throws InterruptedException {
+    Thread.sleep(5000);
     shipmentService.send(event.orderId());
   }
 }

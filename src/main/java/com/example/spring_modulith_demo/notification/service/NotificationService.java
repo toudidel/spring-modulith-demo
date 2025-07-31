@@ -1,4 +1,4 @@
-package com.example.spring_modulith_demo.notification;
+package com.example.spring_modulith_demo.notification.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

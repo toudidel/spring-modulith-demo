@@ -2,6 +2,7 @@ package com.example.spring_modulith_demo.shipment.service;
 
 import com.example.spring_modulith_demo.order.OrderCreatedEvent;
 import java.time.Duration;
+import java.time.LocalDateTime;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.modulith.events.ApplicationModuleListener;
@@ -21,7 +22,10 @@ public class ShipmentManagement {
   public void onOrderCreated(OrderCreatedEvent event) throws InterruptedException {
     Thread.sleep(5000);
     shipmentService.send(event.orderId());
-    log.info("Current time is " + timeMachine.now().toString());
+
+    log.info("Local date time is " + LocalDateTime.now().toString());
+    log.info("Current time-machine time is " + timeMachine.now().toString());
+
     timeMachine.shiftBy(Duration.ofHours(3));
   }
 

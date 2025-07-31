@@ -22,3 +22,4 @@ spring:
       republish-outstanding-events-on-restart: true
     moments:
       enable-time-machine: true
+      zone-id: Europe/Warsaw

@@ -10,6 +10,7 @@ import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,6 +22,7 @@ public class OrderService {
 
   //  private final ShipmentService shipmentService;
 
+  @Transactional
   public UUID createOrder() {
     int randomQuantity = new Random().ints(1, 10).findFirst().getAsInt();
     Order order = repository.save(new Order(UUID.randomUUID(), randomQuantity));

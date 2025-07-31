@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-modulith-demo
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration

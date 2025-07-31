@@ -20,3 +20,5 @@ spring:
         schema-initialization:
           enabled: true
       republish-outstanding-events-on-restart: true
+    moments:
+      enable-time-machine: true
